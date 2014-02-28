@@ -1,0 +1,194 @@
+/*
+	Author: Nathan Peretic
+	Twitter: @nathanperetic
+	Web: http://nathanperetic.com, http://fullstopinteractive.com, http://unitedpixelworkers.com
+*/
+
+/*body {
+	background: url("http://24ways.org/img/body.gif");
+}*/
+
+a, a:visited, label {
+	color: #a2651b;
+	-webkit-transition: all 0.2s;
+	font-size: 15px;
+}
+a:hover, label:hover {
+	color: #0C5C86;
+}
+label {
+	cursor: pointer;
+}
+input {
+	display: none;
+}
+
+.window {
+	overflow: hidden;
+	width: 100%;
+}
+
+.nav {
+	
+	color: #202020;
+	font-family: sans-serif;
+	position: relative;
+	width: 100%;
+	z-index: 10;
+	margin-bottom: .5em;
+}
+	.nav ul {
+		margin: 0;
+	}
+	.nav li {
+		display: block;
+		list-style: none;
+		margin: 0.5em 2em 0.5em 0;
+	}
+	@media screen and (min-width: 600px) {
+		.nav li {
+			display: inline-block;
+		}
+	}
+		.nav a, .nav label {
+			/*color: #efefef;*/
+			text-decoration: none;
+		}
+		.nav a:hover, .nav label:hover {
+			color: #1799DD;	
+}
+.article, .liner {
+	min-width: 100vw;
+	min-height: 100vh;
+	overflow: visible;
+}
+	.article__liner {
+		margin: 0 auto;
+		max-width: 600px;  		        				
+		padding: 1em;
+	}
+		.header {
+			border-bottom: 1px solid #ccc;
+			margin-bottom: 2em;
+		}
+.left {
+	float: left;
+	width: 50%;
+}
+.right {
+	float: right;
+	width: 50%;
+	text-align: right;
+}
+
+/* Example 1 */
+.example-1 .pages {
+	width: 200vw;
+}
+	.example-1 .page {
+		float: left;
+		overflow: hidden;
+		width: 100vw;
+	}
+
+/* Example 2 */
+.example-2 .pages {
+	width: 100vw;
+}
+.example-2 .page {
+		-webkit-transition: width 1s;
+	float: left;
+	left: 0;
+	margin-top: -10em;
+	overflow: hidden;
+	padding-top: 10em;
+	position: relative;
+	width: 100vw;
+}
+.example-2 .page:not(:target) {
+	max-height: 100vh;
+	width: 0;
+}
+
+/* Example 3 */
+.example-3 .pages {
+	width: 100vw;
+}
+.example-3 .page {
+		-webkit-transition: width 1s;
+	float: left;
+	overflow: hidden;
+	width: 100vw;
+}
+.example-3 input:not(:checked) + .page {
+	max-height: 100vh;
+	width: 0;
+}
+
+/* Example 4 */
+.example-4 .pages {
+	width: 100vw;
+}
+.example-4 .page {
+		-webkit-transition: width 1s;
+	float: left;
+	overflow: hidden;
+	width: 100vw;
+}
+.example-4 input:not(:checked) + .page {
+	max-height: 100vh;
+	width: 0;
+}
+
+.excerpt-container {
+	float: left;
+	padding: 2em;
+	position: relative;
+	width: 100%;
+}
+	.excerpt {
+		height: 16em;
+	}
+/* Note: I highly recommend injecting media queries directly into your CSS. It will change your life. Thank Jeff Croft: http://jeffcroft.com/blog/2012/mar/02/implementing-responsive-design/ */
+@media screen and (min-width: 600px) {
+	.excerpt-container {
+		width: 50%;
+	}
+	.excerpt-container:nth-child(odd) {
+		clear: left;
+	}
+}
+@media screen and (min-width: 800px) {
+	.excerpt-container {
+		width: 33.33333%;				
+	}
+	.excerpt-container:nth-child(odd) {
+		clear: none;
+	}
+}
+.continue {
+	display: block;
+}
+
+/* Flows */
+.excerpt_name_article-1,
+.page-1 .article-flow-region {
+-webkit-flow-from: article-1;
+}
+.article-content_for_article-1 {
+-webkit-flow-into: article-1;
+}
+.excerpt_name_article-2,
+.page-2 .article-flow-region {
+-webkit-flow-from: article-2;
+}
+.article-content_for_article-2 {
+-webkit-flow-into: article-2;
+}
+.excerpt_name_article-3,
+.page-3 .article-flow-region {
+-webkit-flow-from: article-3;
+}
+.article-content_for_article-3 {
+-webkit-flow-into: article-3;
+}
